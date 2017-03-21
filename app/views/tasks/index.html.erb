@@ -1,0 +1,12 @@
+
+ <h2>Your tasks today!</h2>
+
+<% @tasks.each do |item| %>
+  <p><%= item.name %></p>
+<%= link_to "wanna see my task", task_path(item) %>
+  <p><%= item.done %></p>
+<% end %>
+
+
+<%= link_to "Add a new task", new_task_path %>
+

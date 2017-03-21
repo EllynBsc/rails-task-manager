@@ -1,0 +1,9 @@
+
+<%= @task.name %>
+<%= @task.done %>
+
+<%= link_to "Return to my tasks list", tasks_path %>
+<%= link_to "Update a task", edit_task_path(@task) %>
+<%= link_to "Destroy a task", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
